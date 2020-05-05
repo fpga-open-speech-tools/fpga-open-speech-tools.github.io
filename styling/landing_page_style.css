@@ -1,0 +1,23 @@
+.jumbotron {
+    color: white;
+    background-image: url('../media/landing_page/FPGAOpenSpeechTools.PNG');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+}
+
+.icons{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.icons h5 {
+    color: black;
+    padding-top: 10px;
+    font-family: 'Slim_Joe';
+}
+
+.accreditation{
+    padding: 10px;
+}

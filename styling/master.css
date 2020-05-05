@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Big_John';
+    src: url("../fonts/big_john.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'Slim_Joe';
+    src: url("../fonts/slim_joe.otf") format("opentype");
+}
+
+.jumbotron h1{
+    padding-top: 27.5%; 
+    padding-left: 3%;
+    font-family: 'Slim_Joe';
+}
+
+.jumbotron h2 { 
+    padding-left: 3%;
+    font-family: 'Big_John';
+}
+
+.py-4 {
+    font-family: 'Slim_Joe';
+}

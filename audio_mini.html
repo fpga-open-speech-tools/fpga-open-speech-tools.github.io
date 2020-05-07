@@ -63,6 +63,15 @@
             <h2 class="display-2">Audio Mini</h2>
         </div>
 
+        <!-- Overview -->
+        <div class="container">
+            <h2 class="display-3">Overview</h2>
+            <p>
+                The Audio Mini is an audio processing cape designed for the Altera DE-10 Nano. This cape contains an AD1939 audio codec that is used to sample audio from the line input and play back audio to the headphone output. The sampled audio is passed to a Cyclone V FPGA on the DE-10 Nano where the data can be processed. This platform is ideally suited for educational use as it is relatively low-cost and can be used in conjunction with Mathworks Simulink and FPGA Open Speech Tools’ code generation tool to rapidly create effects. This workflow also makes the Audio Mini an excellent tool for developers who wish to create prototype algorithms for devices such as hearing aids or sound effects processors.
+            </p>
+        </div>
+
+        <!-- Tech specs -->
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-8">
@@ -80,6 +89,22 @@
             </div>
         </div>
 
+        <!-- Demos -->
+        <div class="container">
+            <h2 class="display-2">Demos</h2>
+            <h4 class="display-4">Passthrough</h4>
+            <p>
+                The pass through project is the reference design for all Audio Mini projects.  Audio is simply passed from the line input to the headphone output of the Audio Mini without any added effects.  
+            </p>
+            <h4 class="display-4">Multi-Effects Processor</h4>
+            <p>
+                The multi-effects processor is a project that contains three distinct sound effects; a bitcrusher that truncates the digital audio sample word, a flanger that mixes a phase shifted copy of an audio signal with the original, and an echo.  These sound effects are controlled through an Android app running on a tablet on the same local area network.  The app contains different types of controls to alter the sound effect parameters, including switches and radial dials, which communicate to the sound effect registers in the FPGA fabric through kernel modules running on the FPGA hard processor system.
+            </p>
+            <h4 class="display-4">Simple Hearing Aid</h4>
+            <p>
+                This project is a demonstration of a very simple hearing aid that can be modified by an application running on another device.  The hearing aid is made up of two channels, each containing a master volume and four bandpass filters implemented in the FPGA fabric.  These elements are controlled through loadable kernel modules from Linux running on the hard processor system of the FPGA.
+            </p>
+        </div>
     </main>
 
     <footer class="py-4 bg-light">

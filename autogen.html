@@ -10,9 +10,8 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styling/master.css">
-    <link rel="stylesheet" href="styling/audio_mini.css">
 
-    <title>Audio Mini</title>
+    <title>Autogen Software</title>
   </head>
   <body>    
     <!-- Navigation Bar-->  
@@ -60,51 +59,53 @@
     <main>
         <div class="jumbotron jumbotron-fluid">
             <h1 class="display-2">Open Speech</h1>
-            <h2 class="display-2">Audio Mini</h2>
+            <h2 class="display-2">Autogen Software</h2>
         </div>
 
         <!-- Overview -->
         <div class="container">
             <h2 class="display-3">Overview</h2>
-            <p>
-                The Audio Mini is an audio processing cape designed for the Altera DE-10 Nano. This cape contains an AD1939 audio codec that is used to sample audio from the line input and play back audio to the headphone output. The sampled audio is passed to a Cyclone V FPGA on the DE-10 Nano where the data can be processed. This platform is ideally suited for educational use as it is relatively low-cost and can be used in conjunction with Mathworks Simulink and FPGA Open Speech Tools’ code generation tool to rapidly create effects. This workflow also makes the Audio Mini an excellent tool for developers who wish to create prototype algorithms for devices such as hearing aids or sound effects processors.
-            </p>
-        </div>
-
-        <!-- Tech specs -->
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-8">
-                    <h2 class="display-3"> Technical Specifications</h2>
-                    <ul>
-                        <li>Intel Cyclone V</li>
-                        <li>3.5mm Line In Audio Interface</li>
-                        <li>3.5mm Headphone Out Audio Interface</li>
-                        <li>AD1939 Audio Codec</li>
-                    </ul>
+            <div class="row">
+                <div class="col-md row-sm">
+                    <p>
+                        Developing complete HDL projects is a complicated and lengthy task that can be a barrier to developing algorithms for an FPGA. While the HDL can be synthesized with tools such as Mathworks’ HDL coder, it must still be connected to the system, which likely involves wrapping them in another component with the desired interfaces. The autogeneration software is a code generation tool designed to simplify this process and make development more accessible. The autogeneration software leverages Mathworks’ HDL coder to generate custom VHDL components from a Simulink model, then automatically creates wrappers for these components, and generates and compiles fully functional Quartus projects. Furthermore, the autogeneration tool also creates Linux loadable kernel modules that can be used to access tunable parameters in the VHDL components as well as interface files that can be used by the FPGA Open Speech Tools web application to easily modify these registers.
+                    </p>
                 </div>
-                <div class="col-4">
-                    <img alt='Audio Mini Rendering' src='media/audio_mini/Audio_Mini_Rev1_0.png' style="height: 500px"/>
+                <div class="col-md row-sm">
+                    <img src="media/autogen/system_autogen_overview.svg" class="img-fluid" alt="autogen overview">
                 </div>
+            </div>
+            <br>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/LnuCqBFr9ao" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
 
-        <!-- Demos -->
+        <!-- Development Process -->
         <div class="container">
-            <h2 class="display-2">Demos</h2>
-            <h4 class="display-4">Passthrough</h4>
-            <p>
-                The pass through project is the reference design for all Audio Mini projects.  Audio is simply passed from the line input to the headphone output of the Audio Mini without any added effects.  
-            </p>
-            <h4 class="display-4">Multi-Effects Processor</h4>
-            <p>
-                The multi-effects processor is a project that contains three distinct sound effects; a bitcrusher that truncates the digital audio sample word, a flanger that mixes a phase shifted copy of an audio signal with the original, and an echo.  These sound effects are controlled through an Android app running on a tablet on the same local area network.  The app contains different types of controls to alter the sound effect parameters, including switches and radial dials, which communicate to the sound effect registers in the FPGA fabric through kernel modules running on the FPGA hard processor system.
-            </p>
-            <h4 class="display-4">Simple Hearing Aid</h4>
-            <p>
-                This project is a demonstration of a very simple hearing aid that can be modified by an application running on another device.  The hearing aid is made up of two channels, each containing a master volume and four bandpass filters implemented in the FPGA fabric.  These elements are controlled through loadable kernel modules from Linux running on the hard processor system of the FPGA.
-            </p>
+            <h2 class="display-3">Development Process</h2>
+            <div class="row">
+                <div class="col-md row-sm">
+                    <p>
+                        Optio sequi et asperiores est quis velit consequatur. Rerum praesentium perferendis laboriosam aspernatur eos. Qui expedita eligendi est qui sed dolor molestiae. Incidunt corrupti consequatur odio sint voluptatem unde. Ut ullam et perferendis.
+                    </p>
+                    <p>
+                        Voluptatem et vel qui vel eos debitis. Sit sapiente autem ipsum consequuntur et et suscipit. Eum voluptas cumque recusandae. Consequatur nobis aliquid amet ratione exercitationem laborum.
+                    </p>
+                    <p>
+                        Sit fuga impedit pariatur omnis. Cum aut voluptate possimus dolores est. Illo excepturi architecto at quasi ad vero optio assumenda.
+                    </p>
+                </div>
+                <div class="col-md row-sm">
+                    <img src="media/autogen/development_flow.svg" class="img-fluid" alt="development flow overview">
+                </div>
+            </div>
+            <br>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/D3c5m9kJ24g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
         </div>
+
     </main>
 
     <footer class="py-4 bg-light">

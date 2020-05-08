@@ -1,8 +1,14 @@
 .jumbotron {
     color: white;
-    background-image: url('../media/audio_blade/audio_blade_banner.png');
+    background-image: url('../media/audio_blade/Audio_Blade_Banner.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     /* height: 60vh; */
+}
+
+.jumbotron h1{
+    padding-top: 35%; 
+    padding-left: 3%;
+    font-family: 'Slim_Joe';
 }

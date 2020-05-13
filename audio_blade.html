@@ -8,6 +8,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <!-- Fontawesome icons -->
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styling/master.css">
     <link rel="stylesheet" href="styling/audio_blade.css">
@@ -58,8 +61,10 @@
 
     <main>
         <div class="jumbotron jumbotron-fluid">
-            <h1 class="display-2">Open Speech</h1>
-            <h2 class="display-2">Audio Blade</h2>
+            <div class="container">
+                <h1 class="display-2">Open Speech</h1>
+                <h2 class="display-2">Audio Blade</h2>
+            </div>
         </div>
 
         <div class="container">
@@ -67,21 +72,89 @@
             <p>
                The Audio Blade is an audio signal processing platform that includes an iWave Arria 10 System on Module. This high performance platform is perfect for researchers who wish to develop advanced audio processing algorithms. The Audio Blade provides several audio interfaces including microphone and line inputs as well as line and headphone outputs that are all controlled through an AD1939 audio codec, high speed audio inputs and outputs that are controlled by AD4020 analog-to-digital converters and AD5791 digital-to-analog converters, and several parallel connections for microphone arrays. The high speed interfaces drastically reduce the hardware latency of the platform and lend themselves to high performance audio applications. The Audio Blade supports up to 16 arrays of 16 microphones each, that can be used for a range of purposes such as sound source localization or audio amplification and noise filtering.
             </p> 
+
+            <!-- Icon Links-->
+            <div class="icons row justify-content-center">
+                <!-- Audio Mini Schematic -->
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12" style="color:lightgray;">
+                    <a href='#' class="icon-links">
+                        <div class="text-center mb-30">
+                            <div>
+                                <i class="fas fa-info-circle fa-4x"></i>
+                            </div>
+                            <div>
+                                <h5>Schematic</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Audio Mini Demos -->
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                    <a href='#' class="icon-links" style="color:lightgray;">
+                        <div class="text-center mb-30">
+                            <div>
+                                <i class="fab fa-creative-commons-sampling fa-4x"></i>
+                            </div>
+                            <div>
+                                <h5>Web Demos</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Online Store -->
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                    <a href='' class="icon-links" style="color:lightgray;">
+                        <div class="text-center mb-30">
+                            <div>
+                                <i class="fas fa-shopping-cart fa-4x"></i>
+                            </div>
+                            <div>
+                                <h5>Web Store</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Tech specs -->
+            <!-- <div class="row">
+                <h2 class="display-3">Technical Specifications</h2>
+            </div>
+            <div class="row">
+                <h4 class="display-4">Audio Blade: Baseboard</h3>
+            </div>
+            <div class="row">
+                <h4 class="display-4">Audio Blade: AD1939</h3>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <ul>
+                        <li>Analog Devices AD1939 Audio Codec</li>
+                        <li>1/4" Line In Audio Interface</li>
+                        <li>Balanced XLR Microphone In Audio Interface</li>
+                        <li>1/4" Line Out Audio Interface</li>
+                        <li>1/4" Headphone Out Audio Interface</li>
+                    </ul>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <img alt='AB-AD1939 Rendering' src='media/audio_blade/Audio_Blade_AD1939_0P0.png' style="height: 300px"/>    
+                </div>
+            </div> -->
+
+            <!-- Demos-->
+            <!-- <h2 class="display-3">Demos</h2>-->
         </div>
-
-        <!-- <div class="container">
-            <h2 class="display-3">Demos</h2>
-        </div> -->
-
 
     </main>
 
+
     <footer class="py-4 bg-light">
         <div class="container text-center">
-            <medium>Flat Earth Inc - Open Speech Tools</medium>
+            <a href="https://flatearthinc.com/">
+                <img alt='FE_Logo'  src='media/FE_horizontal.png' style="height: 75px"/>
+            </a>
         </div>
     </footer>
-
 
 
     <!-- Optional JavaScript -->

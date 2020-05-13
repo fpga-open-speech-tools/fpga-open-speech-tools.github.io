@@ -10,15 +10,22 @@
 
 .jumbotron h1{
     padding-top: 27.5%; 
-    padding-left: 3%;
     font-family: 'Slim_Joe';
 }
 
 .jumbotron h2 { 
-    padding-left: 3%;
     font-family: 'Big_John';
 }
 
-.py-4 {
+.icons, a.icon-links{
+    color: inherit;
+    padding-top: 25px;
+    padding-bottom: 25px;
     font-family: 'Slim_Joe';
+}
+
+.icons h5{
+    color: black;
+    padding-top: 10px;
+
 }

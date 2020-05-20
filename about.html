@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Fontawesome icons -->
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styling/master.css">
+    <link rel="stylesheet" href="styling/landing_page_style.css">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $("#navbar").load("navbar.html");
+        });
+    </script>
+
+    <title>About FPGA Open Speech Tools</title>
+</head>
+
+<body>
+
+    <header id="navbar"> </header>
+
+    <main>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-2">FPGA Open<br>Speech Tools</h1>
+            </div>
+        </div>
+
+        <!-- Open Speech Tools Description-->
+        <div class="container">
+            <p>
+                Field programmable gate arrays (FPGAs) are very powerful processing devices that can process data
+                rapidly in parallel and with deterministic latency, however designing algorithms for these devices can
+                be challenging. FPGA Open Speech Tools is a project that is designed to help make development of audio
+                signal processing algorithms for FPGAs more accessible and efficient. This involves the creation of both
+                new hardware and software for developers to use. The hardware side of the project consists of both a
+                low-cost and high-performance platform. The low-cost platform is designed to be used by hobbyists and in
+                the classroom while the high-performace platfrom is designed for use in a research setting.
+            </p>
+            <p>
+                The software side of the project consists of an autogeneration tool that addresses the inherent
+                difficulty in developing for FPGAs and a web-based application to make user interactions with the
+                hardware much more convenient. The autogeneration tool uses Mathworks’ Simulink to build complex audio
+                processing systems with MATLAB, a programming language that is very accessible, sythesize the design
+                into a VHLD component, and build Linux loadable kernel modules for the VHDL component to control its
+                adjustable parameters at runtime. The autogeneration tool also streamlines the construction and
+                compilation of the Quartus project, which creates the bitstream used to program the FPGA. The code
+                generation tool also creates several interface files used by a web-based application to interact with
+                the algorithms running on the FPGA.
+            </p>
+
+            <!-- Open Speech Tools Accreditation -->
+            <div class="acknowledgment text-center">
+                <h5>
+                    This project was supported by the National Institutes of Health (Grant number <a
+                        href="https://projectreporter.nih.gov/project_info_description.cfm?aid=9759652&icde=49880278&ddparam=&ddvalue=&ddsub=&cr=1&csb=default&cs=ASC&pball=">5R44DC015443</a>).
+                </h5>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer class="py-4 bg-light">
+        <div class="container text-center">
+            <a href="https://flatearthinc.com/">
+                <img alt='FE_Logo' src='media/FE_horizontal.png' style="height: 75px" />
+            </a>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

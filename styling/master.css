@@ -29,3 +29,10 @@
     padding-top: 10px;
 
 }
+
+a.disabled {
+    /* Make the disabled links grayish*/
+    color: lightgray;
+    /* And disable the pointer events */
+    pointer-events: none;
+  }

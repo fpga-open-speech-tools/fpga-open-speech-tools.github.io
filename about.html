@@ -52,26 +52,46 @@
         <!-- Open Speech Tools Description-->
         <div class="container">
             <p>
-                Field programmable gate arrays (FPGAs) are very powerful processing devices that can process data
-                rapidly in parallel and with deterministic latency, however designing algorithms for these devices can
-                be challenging. FPGA Open Speech Tools is a project that is designed to help make development of audio
-                signal processing algorithms for FPGAs more accessible and efficient. This involves the creation of both
-                new hardware and software for developers to use. The hardware side of the project consists of both a
-                low-cost and high-performance platform. The low-cost platform is designed to be used by hobbyists and in
-                the classroom while the high-performace platfrom is designed for use in a research setting.
+              Field programmable gate arrays (FPGAs) are very powerful processing devices that can 
+              process data rapidly in parallel and with deterministic latency, however designing 
+              algorithms for these devices can be challenging. FPGA Open Speech Tools is a project 
+              that is designed to help make development of audio signal processing algorithms for 
+              FPGAs more accessible and efficient. This involves the creation of both new hardware 
+              and software for developers to use. 
             </p>
             <p>
-                The software side of the project consists of an autogeneration tool that addresses the inherent
-                difficulty in developing for FPGAs and a web-based application to make user interactions with the
-                hardware much more convenient. The autogeneration tool uses Mathworks’ Simulink to build complex audio
-                processing systems with MATLAB, a programming language that is very accessible, sythesize the design
-                into a VHLD component, and build Linux loadable kernel modules for the VHDL component to control its
-                adjustable parameters at runtime. The autogeneration tool also streamlines the construction and
-                compilation of the Quartus project, which creates the bitstream used to program the FPGA. The code
-                generation tool also creates several interface files used by a web-based application to interact with
-                the algorithms running on the FPGA.
+              Two hardware platforms are currently being developed.  The first is a low-cost platform 
+              based on the Altera DE10-Nano, called the Audio Mini. This platform is intended to be 
+              used by hobbyists and in the classroom to create custom audio processing projects.  
+              The high-performance platform, called the Audio Blade, is designed for use in a research 
+              setting.  Unlike the Audio Mini which has two interfaces, this platform has eight audio 
+              interfaces.  These include microphone in, headphone out, line in and out, high-speed audio 
+              in and out, as well as a microphone array input and speaker array output.
             </p>
-
+            <p>
+              Development on FPGAs can be difficult and time consuming, so we are currently developing 
+              an autogeneration tool to help mitigate these problems.  The autogeneration tool uses 
+              Mathworks’ Simulink to build complex audio processing systems with MATLAB, a programming 
+              language that is very accessible, synthesize the design into a VHLD component, and build 
+              Linux loadable kernel modules for the VHDL component to control its adjustable parameters 
+              at runtime. The autogeneration tool also streamlines the construction and compilation of a 
+              complete Quartus project, which creates the bitstream used to program the FPGA.            
+            </p>
+            <p>
+              The loadable kernel modules can be accessed through the command line on the embedded hard 
+              processor system (HPS), however this is inconvenient for any practical application.  
+              Therefore, we are also developing a web-based application that can easily interface with 
+              these drivers at runtime.  This unique, innovative app uses configuration files created 
+              by the autogeneration tool to render custom interfaces at runtime.  Furthermore, these 
+              configuration files can either be present on the device on boot-up or downloaded, using 
+              the app, from a cloud service like Amazon Web Services.              
+            </p>
+            <p>
+              Several example projects for each platform are currently being developed as well.  The 
+              most basic projects are simple pass throughs, in which audio is simply passed unmodified 
+              from input to output, which serve as reference designs.  Other example projects include 
+              simple hearing aids, audio effects processors, and delay-and-sum beamformers.             
+            </p>
             <!-- Open Speech Tools Accreditation -->
             <div class="acknowledgment text-center">
                 <h5>

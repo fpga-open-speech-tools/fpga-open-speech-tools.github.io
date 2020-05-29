@@ -35,4 +35,17 @@ a.disabled {
     color: lightgray;
     /* And disable the pointer events */
     pointer-events: none;
-  }
+}
+
+.card {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    padding: 1rem;
+    border-radius: 10px;
+    place-content: center;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.btn-block{
+    background-color: lightgray;
+}

@@ -13,7 +13,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styling/master.css">
-    <link rel="stylesheet" href="styling/hardware.css">
+    <link rel="stylesheet" href="styling/software.css">
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -28,7 +28,7 @@
         });
     </script>
 
-    <title>Hardware Overview</title>
+    <title>Software Overview</title>
   </head>
   <body> 
 
@@ -38,29 +38,29 @@
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
                 <h1 class="display-2">Open Speech</h1>
-                <h2 class="display-2">Hardware</h2>
+                <h2 class="display-2">Software</h2>
             </div>
         </div>
 
         <div class="container">
             <div class="row">
-                <!-- Audio Mini -->
-               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 pt-2 pb-4">
+                <!-- Auto Gen -->
+               <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-6 col-sm-12 pt-2 pb-4">
                    <div class="card  h-100">
                         <!-- <img class="card-img-top" src="media/hardware/audio_mini/Audio_Mini_Profile.jpg" alt="Audio Mini Profile Image"> -->
                         <div class="card-body">
-                            <h5 class="card-title display-4 text-center">Audio Mini</h5>
+                            <h5 class="card-title display-4 text-center">Auto Gen</h5>
                             <p class="card-text">
-                                The Audio Mini is an audio processing cape designed for the Altera DE-10 Nano. This cape contains an AD1939 audio codec that is used to sample audio from the line input and play back audio to the headphone output. 
+                                The autogeneration software leverages Mathworks’ HDL coder to generate custom VHDL components from a Simulink model, then automatically creates wrappers for these components, and generates and compiles fully functional Quartus projects. 
                             </p>
-                            <a href="audio_mini.html" class="btn-block text-center btn-lg btn-light mt-2">Details</a>
+                            <a href="autogen.html" class="btn-block text-center btn-lg btn-light mt-2">Details</a>
                         </div>
                    </div>
                </div>
-               <!-- Audio Blade -->
-              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 pt-2 pb-4">
+               <!-- Web App -->
+              <!-- <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 pt-2 pb-4">
                   <div class="card  h-100">
-                       <!-- <img class="card-img-top" src="" alt="Audio Blade Profile Image"> -->
+                       <!-- <img class="card-img-top" src="" alt="Audio Blade Profile Image"> 
                        <div class="card-body">
                            <h5 class="card-title display-4 text-center">Audio Blade</h5>
                            <p class="card-text">
@@ -69,11 +69,11 @@
                            <a href="audio_blade.html" class="btn-block text-center btn-lg btn-light mt-2">Details</a>
                        </div>
                   </div>
-              </div>
+              </div> -->
             </div>
         </div>
     </main>
-        
+
     <footer class="py-4 bg-light">
         <div class="container text-center">
             <a href="https://flatearthinc.com/">
@@ -81,5 +81,5 @@
             </a>
         </div>
     </footer>
-    
-  </body>
+
+</body>

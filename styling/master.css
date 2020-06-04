@@ -1,10 +1,24 @@
 /* Logo Colors:
-Primary Blue - #138E8E
-Primary Gray - #595959
-Secondary Blue 1 - #025951
-Secondary Blue 2 - #04C4B1
-Light Gray - #D9D9D9
-Black - #0D0D0D */
+--- Teal ---
+ - Primary Teal - #138E8E
+ - Light Teal - #B8DDDD  - 30% Opacity of Accent 3
+ - Secondary Teal - #025951
+
+--- Gray ---
+ - Primary Gray - #595959
+ - Light Gray - #D9D9D9
+ - Black - #0D0D0D
+
+--- Accents ---
+ - Accent 1 - Yellow - #EDA9223
+ - Light Accent 1 - Yellow - #FAE5BD  - 30% Opacity of Accent 3
+
+ - Accent 2 - Blue - #264A9F
+ - Light Accent 2 - Blue - #BDC8E2  - 30% Opacity of Accent 3
+
+ -  Accent 3 - Orange - #ED7E23
+ - Light Accent 3 - Orange - #FAD8BD - 30% Opacity of Accent 3
+ */
 
 
 @font-face {

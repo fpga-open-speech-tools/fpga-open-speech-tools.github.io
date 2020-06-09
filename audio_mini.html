@@ -27,6 +27,24 @@
             $("#navbar").load("navbar.html");
         });
     </script>
+    
+        <script>
+        
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+    </script>
 
     <title>Audio Mini</title>
   </head>
@@ -119,26 +137,22 @@
                 The pass through project is a simple design where audio is passed directly from line in to headphone out; no processing is performed inside the FPGA.  This makes the pass through project an ideal reference design for development because all other systems of the Audio Mini are functional and custom processing components can be easily connected.
             </p>
             <h4 class="display-4">Simple Filter Bank</h4>
-            
-               <div class="row">
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                   <p>
                       The simple filter bank is an example design that uses a graphical user interface to modify the amplitudes of certain frequency ranges of an audio signal.  The filter bank is made up of two channels, each containing a master volume and four bandpass filters implemented in the FPGA fabric.  These elements are controlled through loadable kernel modules from Linux running on the hard processor system of the FPGA.
+                  </p>
+            
+              <button type="button" class="collapsible">Block Diagram</button>
+                <div class="content">
+                  <img alt='Audio Mini Rendering' src='media/hardware/audio_mini/filterbank.png' class="img-responsive" width="100%" height="auto"/>
                 </div>
-                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                    <img alt='Audio Mini Rendering' src='media/hardware/audio_mini/filterbank.png' class="img-responsive" width="100%" height="auto"/>
-                </div>
-            </div>
             <h4 class="display-4">Multi-Effects Processor</h4>
-              <div class="row">
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                   <p>
                       The multi-effects processor is an example design that contains three distinct sound effects; a bitcrusher, an echo, and a flanger.  The bitcrusher truncates a 32-bit audio word, creating noticable quantization noise when a sufficient number of bits have been eliminated.  The echo effect combines a time shifted copy of an audio signal with itself.  The flanger, similar to the echo, also combines a time shifted copy of an audio signal with itself, however this copy does not have a constant delay.  Instead, the flanger uses a low frequency oscillator to modulate the delay of the signal copy.  Each effect can be controlled through a web-based application, via sliders and switches, that accesses various sound effect registers in the FPGA fabric through loadable kernel modules.
                   </p>
-                </div>
-                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+              <button type="button" class="collapsible">Block Diagram</button>
+              <div class="content">
                     <img alt='Audio Mini Rendering' src='media/hardware/audio_mini/soundeffects.png' class="img-responsive" width="100%" height="auto"/>
-                </div>
+              </div>
             </div>
         </div>
     </main>
@@ -150,6 +164,6 @@
             </a>
         </div>
     </footer>
-    
+
   </body>
 </html>

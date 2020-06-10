@@ -28,24 +28,6 @@
         });
     </script>
     
-        <script>
-        
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
-
-    for (i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.display === "block") {
-          content.style.display = "none";
-        } else {
-          content.style.display = "block";
-        }
-      });
-    }
-    </script>
-
     <title>Audio Mini</title>
   </head>
   <body>    
@@ -133,12 +115,14 @@
             <!-- Demos -->
             <h2 class="display-2">Demos</h2>
             <h4 class="display-4">Passthrough</h4>
+            <div class="container">
             <p>
                 The pass through project is a simple design where audio is passed directly from line in to headphone out; no processing is performed inside the FPGA.  This makes the pass through project an ideal reference design for development because all other systems of the Audio Mini are functional and custom processing components can be easily connected.
             </p>
             <h4 class="display-4">Simple Filter Bank</h4>
                   <p>
                       The simple filter bank is an example design that uses a graphical user interface to modify the amplitudes of certain frequency ranges of an audio signal.  The filter bank is made up of two channels, each containing a master volume and four bandpass filters implemented in the FPGA fabric.  These elements are controlled through loadable kernel modules from Linux running on the hard processor system of the FPGA.
+                  </p>
                   </p>
             
               <button type="button" class="collapsible">Block Diagram</button>
@@ -154,7 +138,6 @@
                     <img alt='Audio Mini Rendering' src='media/hardware/audio_mini/soundeffects.png' class="img-responsive" width="100%" height="auto"/>
               </div>
             </div>
-        </div>
     </main>
     
     <footer class="py-4 bg-light">
@@ -164,6 +147,21 @@
             </a>
         </div>
     </footer>
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
 
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+  </script>
   </body>
 </html>

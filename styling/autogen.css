@@ -1,0 +1,9 @@
+.jumbotron {
+    color: white;
+    background-image: url('../media/autogen/emile-perron-xrVDYZRGdw4-unsplash.jpg');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 60vh; */
+}
+

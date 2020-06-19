@@ -8,8 +8,12 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <!-- Fontawesome icons -->
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styling/master.css">
+    <link rel="stylesheet" href="styling/autogen.css">
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -45,6 +49,39 @@
 
         <!-- Overview -->
         <div class="container">
+             <!-- Icon Links-->
+             <div class="icons">
+                <div class="row justify-content-center">
+                    <!-- Audio Mini Schematic -->
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                        <a href='' class="icon-links disabled">
+                            <div class="text-center mb-30">
+                                <div>
+                                    <i class="fas fa-file-alt fa-6x"></i>
+                                </div>
+                                <div>
+                                    <h5>User Guide</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- GitHub -->
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                        <a href='https://github.com/fpga-open-speech-tools/simulink_codegen' class="icon-links">
+                            <div class="text-center mb-30">
+                                <div>
+                                    <i class="fab fa-github fa-6x"></i>
+                                </div>
+                                <div>
+                                    <h5>GitHub</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+             </div>
+             
+
             <h2 class="display-3">Overview</h2>
             <div class="row">
                 <div class="col-md row-sm">
@@ -69,20 +106,32 @@
         <div class="container">
             <h2 class="display-3">Development Process</h2>
             <div class="row">
-                <div class="col-md row-sm">
-                    <p>
-                        Optio sequi et asperiores est quis velit consequatur. Rerum praesentium perferendis laboriosam aspernatur eos. Qui expedita eligendi est qui sed dolor molestiae. Incidunt corrupti consequatur odio sint voluptatem unde. Ut ullam et perferendis.
-                    </p>
-                    <p>
-                        Voluptatem et vel qui vel eos debitis. Sit sapiente autem ipsum consequuntur et et suscipit. Eum voluptas cumque recusandae. Consequatur nobis aliquid amet ratione exercitationem laborum.
-                    </p>
-                    <p>
-                        Sit fuga impedit pariatur omnis. Cum aut voluptate possimus dolores est. Illo excepturi architecto at quasi ad vero optio assumenda.
-                    </p>
-                </div>
-                <div class="col-md row-sm">
-                    <img src="media/autogen/development_flow.svg" class="img-fluid" alt="development flow overview">
-                </div>
+                <img src="media/autogen/development_flow.svg" class="img-fluid" alt="development flow overview">
+            </div>
+            <div class="row">
+                <p>
+                The process begins with a Simulink model and a set of associated Matlab scripts, known here as "Simulink model init scripts". The init scripts contain information about model parameters (clock rates, registers ,etc.) and setup/takedown for simulation stimuli.
+                </p>
+
+                <p>
+                Information from the model and init scripts are used to create an intermediate dataplane configuration file that most of the downstream utilities use.This dataplane configuration file is the interface between MATLAB and external scripts; separating the code generation from Matlab keeps everything modular, as well as enabling the code generation to be used without MATLAB/Simulink.
+                </p>
+
+                <p>
+                MATLAB's HDL Coder takes care of most of the HDL coder generation. A python script generates an Avalon wrapper for the MATLAB-generated HDL so it is compatible with the Avalon interfaces we use in our Quartus projects. Another python script generates a TCL file that creates a Platform Designer IP core with the generated HDL files. The TCL file and HDL files make up what we call the Simulink algorithm's "IP Core".
+                </p>
+
+                <p>
+                Using information in the dataplane configuration file, some Python scripts create C code for a Linux device driver that will control registers in the IP core. Another Python script generates a Makefile and a Kbuild file based upon the Simulink model's (and, by extension, the C code's) name; these files are used to compile the device driver into a loadable kernel module.
+                </p>
+
+                <p>
+                A set of python functions creates/copies files needed for a Quartus project. The Simulink algorithm IP core is added to a Platform Designer system automatically between the input and output of the AD1939 audio codec component. These Python functions also compile the Quartus project. After a successful compilation, Quartus calls TCL scripts that convert the FPGA bitstream to an rbf (raw binary file). It is planned that Quartus will call TCL scripts to generate a device tree overlay for the project/algorithm as well.
+                </p>
+
+                <p>
+                To enable autogenerating a GUI, two configuration files are created: a UI configuration and a Linker configuration. The information needed to create these files is stored in structs that define the registers in the model. The UI configuration is used by the autogen webapp to create a UI to control registers. The Linker configuration is used to map the UI controls to the registers' filepaths in Linux's sysfs pseudo filesystem.
+                </p>
             </div>
             <br>
             <div class="embed-responsive embed-responsive-16by9">

@@ -1,0 +1,8 @@
+.jumbotron {
+    color: white;
+    background-image: url('../media/hardware/audio_research/audio_research_banner.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 60vh; */
+}

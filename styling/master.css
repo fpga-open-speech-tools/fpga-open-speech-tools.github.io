@@ -1,6 +1,6 @@
 /* Logo Colors:
 --- Green ---
- - Primary Green - #36B14B
+ - Primary Green - #34b34b
  - Light Green   - #C2E7C9  - 30% Opacity of Primary Green
  - Dark Green    - #156322
 
@@ -65,4 +65,8 @@ a.disabled {
 
 .btn-block{
     background-color: lightgray;
+}
+
+#navbar-icon{
+    color: #34b34b;
 }

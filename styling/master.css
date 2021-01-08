@@ -70,3 +70,13 @@ a.disabled {
 #navbar-icon{
     color: #34b34b;
 }
+
+.matching-card {
+    height: calc(100% - 60px);
+}
+
+.matching-card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
